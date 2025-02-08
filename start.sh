@@ -12,9 +12,7 @@ else
     ln -s backend/.env
 fi
 
-if ! [ -d "frontend/node_modules" ]; then
-    docker run --rm  -v "$(pwd)/frontend:/app" --entrypoint npm idomi27/vue install
-fi
+docker run --rm  -v "$(pwd)/frontend:/app" --entrypoint npm idomi27/vue install
 
 docker compose up -d
 
