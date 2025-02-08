@@ -1,12 +1,12 @@
 <template>
-  <nav class="bg-white dark:bg-gray-800">
-    <div class="flex justify-between p-3 border-b-2 flex-wrap dark:border-none">
+  <nav class="bg-white">
+    <div class="flex justify-between p-3 border-b-2 flex-wrap">
       <RouterLink to="/" class="flex items-center space-x-3">
-        <span class="self-center text-2xl font-semibold dark:text-white">Feladat</span>
+        <span class="self-center text-2xl font-semibold">Feladat</span>
       </RouterLink>
       <button class="block md:hidden" @click="toggleMenu">
         <svg
-          class="w-5 h-5 dark:text-white"
+          class="w-5 h-5"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
