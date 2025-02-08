@@ -22,36 +22,25 @@
         </svg>
       </button>
       <div class="w-full md:block md:w-auto" :class="{hidden: !menuOpen}">
-        <ul class="menu">
-          <li class="menuitem"><RouterLink to="#">1. oldal</RouterLink></li>
+        <ul class="flex flex-col p-4 md:flex-row md:p-0 md:space-x-8">
+          <li class="block py-2 px-3 text-gray-500 hover:bg-blue-400 hover:text-white rounded p-2 has-[.active]:text-blue-500 has-[.active]:hover:text-white"><RouterLink to="#">1. oldal</RouterLink></li>
         </ul>
       </div>
     </div>
   </nav>
 </template>
 
-<script setup>
-import { ref } from 'vue'
-
-const menuOpen = ref(false)
-
-function toggleMenu() {
-  menuOpen.value = !menuOpen.value
+<script>
+export default{
+  data(){
+    return{
+      menuOpen: false
+    }
+  },
+  methods:{
+    toggleMenu(){
+      this.menuOpen = !this.menuOpen
+    }
+  }
 }
 </script>
-
-<style scoped>
-.menu {
-  @apply flex flex-col p-4;
-  @apply md:flex-row md:p-0 md:space-x-8;
-}
-.menuitem {
-  @apply block py-2 px-3 text-gray-500;
-  @apply hover:bg-blue-400 hover:text-white rounded p-2;
-}
-
-.menuitem:has(.active){
-  @apply text-blue-500;
-  @apply hover:text-white;
-}
-</style>
