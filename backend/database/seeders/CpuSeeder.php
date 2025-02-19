@@ -1,8 +1,8 @@
 <?php
 
 namespace Database\Seeders;
+use App\Models\Cpu;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class CpuSeeder extends Seeder
@@ -12,6 +12,6 @@ class CpuSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Cpu::factory(10)->create();
     }
 }

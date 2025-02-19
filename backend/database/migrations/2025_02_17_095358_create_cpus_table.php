@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('cpus', function (Blueprint $table) {
             $table->id();
+            $table->string("brand");
+            $table->string("socket");
+            $table->string("clock");
+            $table->string("watt");
             $table->timestamps();
         });
     }
